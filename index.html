@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kalpana 🌸</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="butterfly butterfly-1">🦋</div>
+        <div class="butterfly butterfly-2">🦋</div>
+        <div class="butterfly butterfly-3">🦋</div>
+        <div class="butterfly butterfly-4">🦋</div>
+        <div class="bird bird-1">🐦</div>
+        <div class="bird bird-2">🕊️</div>
+        <div class="bird bird-3">🦜</div>
+        <div class="flower-petal">🌸</div>
+        <div class="flower-petal">🌺</div>
+        <div class="flower-petal">🌼</div>
+        <div class="flower-petal">🌻</div>
+        <div class="flower-petal">🌷</div>
+        <div class="flower-petal">🌹</div>
+        <div class="leaf leaf-1">🍃</div>
+        <div class="leaf leaf-2">🍂</div>
+        <div class="leaf leaf-3">🌿</div>
+        <div class="cloud cloud-1">☁️</div>
+        <div class="cloud cloud-2">⛅</div>
+        <div class="firefly">✨</div>
+        <div class="firefly">💫</div>
+        <div class="firefly">⭐</div>
+    </div>
+
+    <!-- 3D Parallax Nature Scene -->
+    <div class="parallax-container">
+        <div class="parallax-layer layer-1">
+            <div class="mountain">⛰️</div>
+            <div class="mountain">🏔️</div>
+        </div>
+        <div class="parallax-layer layer-2">
+            <div class="tree">🌲</div>
+            <div class="tree">🌳</div>
+            <div class="tree">🌴</div>
+        </div>
+        <div class="parallax-layer layer-3">
+            <div class="flower-3d">🌺</div>
+            <div class="flower-3d">🌻</div>
+            <div class="flower-3d">🌸</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#wishes" class="nav-link">Wishes</a>
+            <a href="#special-gifts" class="nav-link">Gifts 🎁</a>
+            <a href="#nature" class="nav-link">Nature</a>
+            <a href="#games" class="nav-link">Games</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Header Section -->
+    <section id="home" class="welcome-section">
+        <div class="confetti-container"></div>
+        <div class="welcome-content">
+            <h1 class="main-title glow-text">Happy Birthday</h1>
+            <h2 class="name-title">Kalpana Kushwaha 🌸</h2>
+            <div class="birthday-info">
+                <p class="birthday-date">🎂 November 11, 2005</p>
+                <p class="age-display">Celebrating 20 Beautiful Years</p>
+                <p class="love-nature">🌿 Nature Lover 🌿</p>
+            </div>
+            <!-- Birthday Countdown -->
+            <div class="countdown-container">
+                <h3>🎉 Countdown to Birthday 🎉</h3>
+                <div class="countdown-timer">
+                    <div class="time-box">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-hearts">
+                <span class="heart">💝</span>
+                <span class="heart">💖</span>
+                <span class="heart">💗</span>
+                <span class="heart">💕</span>
+                <span class="heart">💓</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Birthday Wishes Section -->
+    <section id="wishes" class="wishes-section">
+        <div class="section-header">
+            <h2 class="section-title">Birthday Wishes</h2>
+            <p class="section-subtitle">Special messages just for you</p>
+        </div>
+        <div class="wishes-carousel">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="wishes-container">
+                <div class="wish-card active">
+                    <div class="wish-icon">🌹</div>
+                    <p class="wish-text">"Happy Birthday Kalpana! May your day be as beautiful and vibrant as the nature you love so much. You bring sunshine wherever you go!"</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🌺</div>
+                    <p class="wish-text">"Like a flower that blooms in spring, you make the world more beautiful. Wishing you a year filled with happiness, adventure, and endless joy!"</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🦋</div>
+                    <p class="wish-text">"Just as butterflies transform beautifully, may this new year of your life bring amazing transformations and wonderful surprises. Happy 20th Birthday!"</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🌿</div>
+                    <p class="wish-text">"Your love for nature reflects your pure and beautiful soul. May you grow stronger and more radiant with each passing day. Have a magical birthday!"</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🌻</div>
+                    <p class="wish-text">"Like the sunflower always turns to the sun, may you always find light, warmth, and happiness in everything you do. Cheers to 20 amazing years!"</p>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <!-- Nature Slideshow Section -->
+    <section id="nature" class="nature-section">
+        <div class="section-header">
+            <h2 class="section-title">Nature's Beauty</h2>
+            <p class="section-subtitle">As beautiful as you are</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200" alt="Flower Field">
+                <div class="slide-caption">You're as beautiful as nature itself 🌿</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=1200" alt="Forest">
+                <div class="slide-caption">Pure and refreshing like a morning forest 🌲</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=1200" alt="Sunset">
+                <div class="slide-caption">Colorful and mesmerizing like a sunset 🌅</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200" alt="Lake">
+                <div class="slide-caption">Calm and serene like a peaceful lake 💙</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=1200" alt="Butterflies">
+                <div class="slide-caption">Graceful and free like a butterfly 🦋</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Games Section -->
+    <section id="games" class="games-section">
+        <div class="section-header">
+            <h2 class="section-title">Fun Games</h2>
+            <p class="section-subtitle">Play and celebrate!</p>
+        </div>
+        <div class="games-container">
+            <div class="game-card" data-game="memory">
+                <div class="game-icon">🎴</div>
+                <h3 class="game-title">Memory Match</h3>
+                <p class="game-description">Match the nature pairs!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="balloon">
+                <div class="game-icon">🎈</div>
+                <h3 class="game-title">Balloon Pop</h3>
+                <p class="game-description">Pop balloons to score!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="flower">
+                <div class="game-icon">🌸</div>
+                <h3 class="game-title">Catch the Flower</h3>
+                <p class="game-description">Catch falling flowers!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="spin">
+                <div class="game-icon">🎡</div>
+                <h3 class="game-title">Lucky Spin Wheel</h3>
+                <p class="game-description">Spin and win prizes!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="quiz">
+                <div class="game-icon">🎯</div>
+                <h3 class="game-title">Birthday Quiz</h3>
+                <p class="game-description">Test your knowledge!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="whack">
+                <div class="game-icon">🔨</div>
+                <h3 class="game-title">Whack-a-Flower</h3>
+                <p class="game-description">Tap the blooming flowers!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="butterfly">
+                <div class="game-icon">🦋</div>
+                <h3 class="game-title">Butterfly Hunt</h3>
+                <p class="game-description">Catch flying butterflies!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="plant">
+                <div class="game-icon">🌱</div>
+                <h3 class="game-title">Grow Your Garden</h3>
+                <p class="game-description">Plant and grow flowers!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+            <div class="game-card" data-game="nature-quiz">
+                <div class="game-icon">🌍</div>
+                <h3 class="game-title">Nature Trivia</h3>
+                <p class="game-description">Test nature knowledge!</p>
+                <button class="game-btn">Play Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Gifts Section -->
+    <section id="special-gifts" class="special-gifts-section">
+        <div class="section-header">
+            <h2 class="section-title">Special Gifts For You 🎁</h2>
+            <p class="section-subtitle">Carefully chosen with love...</p>
+        </div>
+        <div class="gifts-grid">
+            <div class="gift-box" data-gift="1">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">💐</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">A Bouquet of Feelings 💐</div>
+                    <p class="gift-message">Just like flowers bloom in spring, my thoughts about you brighten every moment. You're the kind of person who makes ordinary days feel extraordinary... 🌸</p>
+                    <div class="gift-animation">💐🌹🌺🌸🌷</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="2">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">💝</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">Unspoken Words 💝</div>
+                    <p class="gift-message">Some feelings are like stars - hard to reach but always shining. You've made me believe that beautiful souls do exist in this world. Your presence is a gift itself... ✨</p>
+                    <div class="gift-animation">💖💕💗💓💝</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="3">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">🌟</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">A Wish From Heart 🌟</div>
+                    <p class="gift-message">If I could give you one thing in life, it would be the ability to see yourself through my eyes. Only then would you realize how special you truly are... 💫</p>
+                    <div class="gift-animation">⭐✨💫🌟⭐</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="4">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">🎵</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">A Melody 🎵</div>
+                    <p class="gift-message">Your laughter is my favorite sound, your smile is my favorite sight. Being around you feels like listening to the perfect song on repeat... 🎶💕</p>
+                    <div class="gift-animation">🎵🎶🎼🎹🎸</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="5">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">📞</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">Let's Talk? 📞</div>
+                    <p class="gift-message">You know what would make this day even more special? Hearing your voice... So here's my number, call me maybe? 😊</p>
+                    <div class="phone-reveal">
+                        <div class="phone-number">📱 8269453514</div>
+                        <p class="flirty-text">I promise I don't bite... much 😉💕</p>
+                        <button class="call-btn" onclick="window.location.href='tel:8269453514'">
+                            <i class="fas fa-phone"></i> Call Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="6">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">🌈</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">My Secret 🌈</div>
+                    <p class="gift-message">Want to know a secret? Every time you smile, you unknowingly steal a piece of my heart. And honestly... I don't want it back 💕🌸</p>
+                    <div class="gift-animation">🌈💖🦋🌺✨</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="7">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">🌙</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">A Moonlit Thought 🌙</div>
+                    <p class="gift-message">Like the moon needs the night to shine, I think I might need you to feel complete. You make everything better just by existing... ✨💫</p>
+                    <div class="gift-animation">🌙⭐💫✨🌟</div>
+                </div>
+            </div>
+            
+            <div class="gift-box" data-gift="8">
+                <div class="gift-wrap">
+                    <div class="ribbon"></div>
+                    <div class="gift-emoji">💌</div>
+                    <p class="gift-label">Tap to Open</p>
+                </div>
+                <div class="gift-content">
+                    <div class="gift-header">A Love Letter 💌</div>
+                    <p class="gift-message">Dear Kalpana, I may not say it often, but your presence in my life is like finding a rare flower in a garden. Beautiful, precious, and impossible to ignore... Happy Birthday! 🌹💕</p>
+                    <div class="gift-animation">💌💖💝💗💕</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mystery Boxes Section -->
+    <section id="mystery" class="mystery-section">
+        <div class="section-header">
+            <h2 class="section-title">Mystery Surprise Boxes</h2>
+            <p class="section-subtitle">Click to reveal special surprises! 🎁</p>
+        </div>
+        <div class="mystery-container">
+            <div class="mystery-box" data-surprise="1">
+                <div class="box-front">
+                    <div class="gift-icon">🎁</div>
+                    <p>Click Me!</p>
+                </div>
+                <div class="box-back">
+                    <p class="surprise-text">"You are amazing, Kalpana! Keep shining bright! ✨"</p>
+                </div>
+            </div>
+            <div class="mystery-box" data-surprise="2">
+                <div class="box-front">
+                    <div class="gift-icon">🎁</div>
+                    <p>Click Me!</p>
+                </div>
+                <div class="box-back">
+                    <p class="surprise-text">"20 years of spreading joy and happiness! 🌟"</p>
+                </div>
+            </div>
+            <div class="mystery-box" data-surprise="3">
+                <div class="box-front">
+                    <div class="gift-icon">🎁</div>
+                    <p>Click Me!</p>
+                </div>
+                <div class="box-back">
+                    <p class="surprise-text">"Your smile lights up the world like sunshine! ☀️"</p>
+                </div>
+            </div>
+            <div class="mystery-box" data-surprise="4">
+                <div class="box-front">
+                    <div class="gift-icon">🎁</div>
+                    <p>Click Me!</p>
+                </div>
+                <div class="box-back">
+                    <p class="surprise-text">"May all your dreams blossom beautifully! 🌺"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Beautiful Moments</h2>
+            <p class="section-subtitle">A collection of nature's wonders</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" alt="Nature 1">
+                <div class="gallery-overlay">
+                    <p>🌸 Blooming Beauty</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600" alt="Nature 2">
+                <div class="gallery-overlay">
+                    <p>🌄 Mountain Majesty</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" alt="Nature 3">
+                <div class="gallery-overlay">
+                    <p>🌳 Forest Dreams</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Nature 4">
+                <div class="gallery-overlay">
+                    <p>🌺 Tropical Paradise</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Nature 5">
+                <div class="gallery-overlay">
+                    <p>⛰️ Peak Perfection</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600" alt="Nature 6">
+                <div class="gallery-overlay">
+                    <p>🌊 Ocean Waves</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600" alt="Nature 7">
+                <div class="gallery-overlay">
+                    <p>🌅 Sunset Serenity</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600" alt="Nature 8">
+                <div class="gallery-overlay">
+                    <p>🌿 Green Paradise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <!-- Animated Nature Footer Background -->
+        <div class="footer-nature-scene">
+            <div class="footer-grass">
+                <span class="grass-blade">🌾</span>
+                <span class="grass-blade">🌾</span>
+                <span class="grass-blade">🌾</span>
+                <span class="grass-blade">🌾</span>
+                <span class="grass-blade">🌾</span>
+            </div>
+            <div class="footer-flowers">
+                <span class="footer-flower">🌸</span>
+                <span class="footer-flower">🌺</span>
+                <span class="footer-flower">🌻</span>
+                <span class="footer-flower">🌼</span>
+                <span class="footer-flower">🌷</span>
+            </div>
+            <div class="footer-butterflies">
+                <span class="footer-butterfly">🦋</span>
+                <span class="footer-butterfly">🦋</span>
+            </div>
+            <div class="footer-birds">
+                <span class="footer-bird">🐦</span>
+                <span class="footer-bird">🕊️</span>
+            </div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-message">
+                <h3>🎉 Happy 20th Birthday, Kalpana! 🎉</h3>
+                <p>May your life be as wonderful as the nature you cherish</p>
+                <div class="nature-quote">
+                    <p>"In every walk with nature, one receives far more than he seeks." 🌿</p>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>Made with ❤️ by <span class="creator-name">Sandeep</span> for <span class="birthday-name">Kalpana Kushwaha</span></p>
+                <p class="footer-year">November 11, 2025</p>
+            </div>
+            <div class="footer-icons">
+                <span>🌸</span>
+                <span>🦋</span>
+                <span>🌿</span>
+                <span>🌺</span>
+                <span>🌻</span>
+                <span>🍃</span>
+                <span>🌳</span>
+                <span>🐦</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Game Modals -->
+    <div id="memoryGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🎴 Memory Match Game</h2>
+            <div id="memoryScore">Score: <span>0</span> | Moves: <span>0</span></div>
+            <div id="memoryGame" class="memory-game"></div>
+            <button class="reset-game">Reset Game</button>
+        </div>
+    </div>
+
+    <div id="balloonGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🎈 Balloon Pop Game</h2>
+            <div id="balloonScore">Score: <span>0</span> | Time: <span>60</span>s</div>
+            <div id="balloonGame" class="balloon-game"></div>
+        </div>
+    </div>
+
+    <div id="flowerGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🌸 Catch the Flower Game</h2>
+            <div id="flowerScore">Score: <span>0</span> | Lives: <span>3</span></div>
+            <canvas id="flowerCanvas" width="600" height="400"></canvas>
+            <div class="flower-controls">
+                <p>Use ← → arrow keys or buttons to move the basket</p>
+                <div class="control-buttons">
+                    <button id="moveLeft">← Left</button>
+                    <button id="moveRight">Right →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="spinGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🎡 Lucky Spin Wheel</h2>
+            <div class="spin-game-container">
+                <canvas id="spinWheel" width="400" height="400"></canvas>
+                <button id="spinButton" class="spin-btn">SPIN THE WHEEL!</button>
+                <div id="spinResult" class="spin-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quizGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🎯 Birthday Quiz</h2>
+            <div id="quizScore">Question <span id="questionNum">1</span> of 5 | Score: <span id="quizPoints">0</span></div>
+            <div id="quizGame" class="quiz-game">
+                <div class="question-container">
+                    <h3 id="questionText"></h3>
+                    <div id="answersContainer" class="answers-container"></div>
+                </div>
+                <div id="quizFeedback" class="quiz-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="whackGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🔨 Whack-a-Flower</h2>
+            <div id="whackScore">Score: <span>0</span> | Time: <span>30</span>s</div>
+            <div id="whackGame" class="whack-game">
+                <div class="hole" data-hole="0"><div class="flower-pop">🌸</div></div>
+                <div class="hole" data-hole="1"><div class="flower-pop">🌺</div></div>
+                <div class="hole" data-hole="2"><div class="flower-pop">🌻</div></div>
+                <div class="hole" data-hole="3"><div class="flower-pop">🌼</div></div>
+                <div class="hole" data-hole="4"><div class="flower-pop">🌷</div></div>
+                <div class="hole" data-hole="5"><div class="flower-pop">🌹</div></div>
+                <div class="hole" data-hole="6"><div class="flower-pop">💐</div></div>
+                <div class="hole" data-hole="7"><div class="flower-pop">🏵️</div></div>
+                <div class="hole" data-hole="8"><div class="flower-pop">🌸</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="butterflyGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🦋 Butterfly Hunt</h2>
+            <div id="butterflyScore">Score: <span>0</span> | Time: <span>45</span>s</div>
+            <canvas id="butterflyCanvas" width="700" height="500"></canvas>
+        </div>
+    </div>
+
+    <div id="plantGameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🌱 Grow Your Garden</h2>
+            <div id="plantScore">Plants Grown: <span>0</span> | Level: <span>1</span></div>
+            <div id="plantGame" class="plant-game">
+                <div class="garden-plot">
+                    <div class="plant-slot" data-slot="0"></div>
+                    <div class="plant-slot" data-slot="1"></div>
+                    <div class="plant-slot" data-slot="2"></div>
+                    <div class="plant-slot" data-slot="3"></div>
+                    <div class="plant-slot" data-slot="4"></div>
+                    <div class="plant-slot" data-slot="5"></div>
+                </div>
+                <div class="plant-controls">
+                    <button class="plant-seed-btn" data-plant="🌱">Plant Seed 🌱</button>
+                    <button class="plant-seed-btn" data-plant="🌻">Plant Sunflower 🌻</button>
+                    <button class="plant-seed-btn" data-plant="🌷">Plant Tulip 🌷</button>
+                    <button class="plant-seed-btn" data-plant="🌹">Plant Rose 🌹</button>
+                </div>
+                <div class="plant-info">
+                    <p>Click on an empty plot, then choose a seed to plant!</p>
+                    <p>Watch your plants grow automatically! 🌱➡️🌿➡️🌺</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="natureQuizModal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-game">&times;</button>
+            <h2>🌍 Nature Trivia Challenge</h2>
+            <div id="natureQuizScore">Question <span id="natureQuestionNum">1</span> of 10 | Score: <span id="natureQuizPoints">0</span></div>
+            <div id="natureQuizGame" class="quiz-game">
+                <div class="question-container">
+                    <h3 id="natureQuestionText"></h3>
+                    <div id="natureAnswersContainer" class="answers-container"></div>
+                </div>
+                <div id="natureQuizFeedback" class="quiz-feedback"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="games/memory-game.js"></script>
+    <script src="games/balloon-game.js"></script>
+    <script src="games/flower-game.js"></script>
+    <script src="games/spin-game.js"></script>
+    <script src="games/quiz-game.js"></script>
+    <script src="games/whack-game.js"></script>
+    <script src="games/butterfly-game.js"></script>
+    <script src="games/plant-game.js"></script>
+    <script src="games/nature-quiz.js"></script>
+</body>
+</html>
