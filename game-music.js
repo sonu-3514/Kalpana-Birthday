@@ -5,17 +5,17 @@ const gameMusicManager = {
     currentAudio: null,
     currentGame: null,
     
-    // Different music for each game (using working URLs)
+    // Different music for each game (using CDN that works with GitHub Pages)
     songs: {
-        memory: 'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3',
-        balloon: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
-        flower: 'https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3',
-        spin: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
-        quiz: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
-        whack: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
-        butterfly: 'https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3',
-        plant: 'https://assets.mixkit.co/active_storage/sfx/2015/2015-preview.mp3',
-        'nature-quiz': 'https://assets.mixkit.co/active_storage/sfx/2022/2022-preview.mp3'
+        memory: 'https://cdn.freesound.org/previews/456/456966_7193358-lq.mp3',
+        balloon: 'https://cdn.freesound.org/previews/351/351563_5121236-lq.mp3',
+        flower: 'https://cdn.freesound.org/previews/456/456965_7193358-lq.mp3',
+        spin: 'https://cdn.freesound.org/previews/320/320655_5260872-lq.mp3',
+        quiz: 'https://cdn.freesound.org/previews/397/397353_7193358-lq.mp3',
+        whack: 'https://cdn.freesound.org/previews/341/341695_5858296-lq.mp3',
+        butterfly: 'https://cdn.freesound.org/previews/456/456967_7193358-lq.mp3',
+        plant: 'https://cdn.freesound.org/previews/108/108615_1661766-lq.mp3',
+        'nature-quiz': 'https://cdn.freesound.org/previews/512/512297_9961300-lq.mp3'
     },
     
     // Play music for a specific game
@@ -42,6 +42,7 @@ const gameMusicManager = {
         try {
             // Create new audio element
             this.currentAudio = new Audio();
+            this.currentAudio.crossOrigin = "anonymous"; // Enable CORS
             this.currentAudio.src = songUrl;
             this.currentAudio.volume = 0.4;
             this.currentAudio.loop = true;
