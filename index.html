@@ -8,15 +8,95 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Background Music -->
-    <audio id="bgMusic" loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Full Page Countdown Lock Screen -->
+    <div id="countdownLockScreen" class="countdown-lock-screen">
+        <div class="lock-screen-bg">
+            <div class="floating-elements-lock">
+                <div class="butterfly-lock">🦋</div>
+                <div class="butterfly-lock">🦋</div>
+                <div class="butterfly-lock">🦋</div>
+                <div class="flower-lock">🌸</div>
+                <div class="flower-lock">🌺</div>
+                <div class="flower-lock">🌻</div>
+                <div class="star-lock">✨</div>
+                <div class="star-lock">💫</div>
+                <div class="star-lock">⭐</div>
+            </div>
+        </div>
+        <div class="lock-screen-content">
+            <div class="lock-title-container">
+                <h1 class="lock-title glow-text">🎉 Something Special is Coming! 🎉</h1>
+                <h2 class="lock-subtitle">Kalpana's Birthday Celebration</h2>
+                <p class="lock-message">The website will unlock at the magical moment...</p>
+            </div>
+            
+            <div class="birthday-reveal">
+                <div class="reveal-date">
+                    <span class="reveal-icon">🎂</span>
+                    <span class="reveal-text">November 11, 2025 at 12:00 AM</span>
+                    <span class="reveal-icon">🎂</span>
+                </div>
+            </div>
 
-    <!-- Music Control Button -->
-    <button id="musicToggle" class="music-toggle">
-        <i class="fas fa-music"></i>
-    </button>
+            <div class="countdown-lock-timer">
+                <div class="countdown-label">⏰ Time Until the Big Reveal ⏰</div>
+                <div class="time-boxes">
+                    <div class="time-box-lock">
+                        <span class="time-value-lock" id="lockDays">00</span>
+                        <span class="time-label-lock">Days</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box-lock">
+                        <span class="time-value-lock" id="lockHours">00</span>
+                        <span class="time-label-lock">Hours</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box-lock">
+                        <span class="time-value-lock" id="lockMinutes">00</span>
+                        <span class="time-label-lock">Minutes</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-box-lock">
+                        <span class="time-value-lock" id="lockSeconds">00</span>
+                        <span class="time-label-lock">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lock-animation">
+                <div class="lock-icon-container">
+                    <span class="lock-emoji">🔒</span>
+                    <div class="lock-pulse"></div>
+                </div>
+                <p class="lock-hint">The celebration awaits... Be patient! 🌸</p>
+            </div>
+
+            <div class="preview-message">
+                <p class="preview-text">✨ A beautiful birthday experience filled with games, surprises, and love is waiting for you! ✨</p>
+                <div class="preview-icons">
+                    <span>🎮</span>
+                    <span>🎁</span>
+                    <span>🌸</span>
+                    <span>🦋</span>
+                    <span>💝</span>
+                    <span>🎨</span>
+                    <span>🌈</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website Content (Hidden until unlocked) -->
+    <div id="mainWebsite" class="main-website-hidden">
+        <!-- Background Music -->
+        <audio id="bgMusic" loop>
+            <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Music Control Button -->
+        <button id="musicToggle" class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
 
     <!-- Floating Elements -->
     <div class="floating-elements">
@@ -518,6 +598,8 @@
             </div>
         </div>
     </footer>
+    </div>
+    <!-- End Main Website Content -->
 
     <!-- Game Modals -->
     <div id="memoryGameModal" class="game-modal">

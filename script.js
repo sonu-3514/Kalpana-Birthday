@@ -2,6 +2,10 @@
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize countdown lock screen first
+    initCountdownLockScreen();
+    
+    // Initialize other features (will be hidden until unlocked)
     initConfetti();
     initMusicToggle();
     initWishesCarousel();
@@ -13,6 +17,125 @@ document.addEventListener('DOMContentLoaded', function() {
     initGiftBoxes();
     initCursorFollower();
 });
+
+// ==========================================
+// COUNTDOWN LOCK SCREEN
+// ==========================================
+function initCountdownLockScreen() {
+    const lockScreen = document.getElementById('countdownLockScreen');
+    const mainWebsite = document.getElementById('mainWebsite');
+    
+    // Target date: November 11, 2025 at 12:00 AM
+    const targetDate = new Date('2025-11-11T00:00:00').getTime();
+    
+    // Check if already unlocked (for testing or if past the date)
+    const checkAndUnlock = () => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        
+        if (distance < 0) {
+            // Unlock the website with animation
+            unlockWebsite();
+            return true;
+        }
+        return false;
+    };
+    
+    // Try to unlock immediately if time has passed
+    if (checkAndUnlock()) {
+        return;
+    }
+    
+    // Update countdown every second
+    const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            unlockWebsite();
+            return;
+        }
+        
+        // Calculate time units
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Update lock screen countdown
+        document.getElementById('lockDays').textContent = String(days).padStart(2, '0');
+        document.getElementById('lockHours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('lockMinutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('lockSeconds').textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+    
+    // Function to unlock website
+    function unlockWebsite() {
+        console.log('🎉 UNLOCKING WEBSITE! Happy Birthday Kalpana! 🎉');
+        
+        // Add unlock animation to lock screen
+        lockScreen.classList.add('unlocked');
+        
+        // Wait for animation to complete, then hide lock screen and show website
+        setTimeout(() => {
+            lockScreen.style.display = 'none';
+            mainWebsite.classList.remove('main-website-hidden');
+            mainWebsite.classList.add('main-website-visible');
+            
+            // Trigger confetti celebration
+            createUnlockCelebration();
+        }, 2000);
+    }
+    
+    // Create celebration effect when unlocked
+    function createUnlockCelebration() {
+        const celebrationEmojis = ['🎉', '🎊', '🎂', '🌸', '🦋', '💝', '🌺', '✨', '💖', '🎈'];
+        
+        for (let i = 0; i < 50; i++) {
+            setTimeout(() => {
+                const emoji = document.createElement('div');
+                emoji.textContent = celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)];
+                emoji.style.cssText = `
+                    position: fixed;
+                    left: ${Math.random() * 100}vw;
+                    top: -50px;
+                    font-size: ${Math.random() * 3 + 2}rem;
+                    pointer-events: none;
+                    z-index: 99999;
+                    animation: fallCelebration ${Math.random() * 3 + 3}s linear forwards;
+                `;
+                
+                document.body.appendChild(emoji);
+                
+                setTimeout(() => emoji.remove(), 6000);
+            }, i * 100);
+        }
+        
+        // Add animation if not exists
+        if (!document.getElementById('celebrationStyle')) {
+            const style = document.createElement('style');
+            style.id = 'celebrationStyle';
+            style.textContent = `
+                @keyframes fallCelebration {
+                    0% {
+                        transform: translateY(0) rotate(0deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(100vh) rotate(${Math.random() * 720}deg);
+                        opacity: 0.5;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+}
+
+// ==========================================
+// END COUNTDOWN LOCK SCREEN
+// ==========================================
 
 // Confetti Animation
 function initConfetti() {

@@ -30,6 +30,430 @@ body {
     overflow-x: hidden;
 }
 
+/* ==========================================
+   COUNTDOWN LOCK SCREEN STYLES
+   ========================================== */
+
+.countdown-lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.countdown-lock-screen.unlocked {
+    animation: unlockFade 2s ease-out forwards;
+}
+
+@keyframes unlockFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+        pointer-events: none;
+    }
+}
+
+.lock-screen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.floating-elements-lock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.butterfly-lock,
+.flower-lock,
+.star-lock {
+    position: absolute;
+    font-size: 3rem;
+    animation: floatLock 20s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+.butterfly-lock:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.butterfly-lock:nth-child(2) {
+    top: 30%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.butterfly-lock:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 10s;
+}
+
+.flower-lock:nth-child(4) {
+    top: 50%;
+    left: 5%;
+    animation-delay: 3s;
+}
+
+.flower-lock:nth-child(5) {
+    top: 70%;
+    right: 10%;
+    animation-delay: 7s;
+}
+
+.flower-lock:nth-child(6) {
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 12s;
+}
+
+.star-lock:nth-child(7) {
+    top: 15%;
+    right: 30%;
+    animation-delay: 2s;
+}
+
+.star-lock:nth-child(8) {
+    bottom: 10%;
+    left: 40%;
+    animation-delay: 8s;
+}
+
+.star-lock:nth-child(9) {
+    top: 60%;
+    right: 5%;
+    animation-delay: 14s;
+}
+
+@keyframes floatLock {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(50px, -50px) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, -100px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-50px, -50px) rotate(270deg);
+    }
+}
+
+.lock-screen-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.lock-title-container {
+    margin-bottom: 40px;
+}
+
+.lock-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 40px rgba(255, 255, 255, 0.5);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.lock-subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffe4f1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lock-message {
+    font-size: 1.3rem;
+    color: #ffd4e5;
+    font-style: italic;
+}
+
+.birthday-reveal {
+    margin: 30px 0;
+    animation: pulse 2s infinite;
+}
+
+.reveal-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.reveal-icon {
+    font-size: 2.5rem;
+    animation: bounce 1s infinite;
+}
+
+.reveal-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-lock-timer {
+    margin: 40px 0;
+}
+
+.countdown-label {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffe4f1;
+    font-weight: bold;
+}
+
+.time-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.time-box-lock {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    padding: 25px 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.time-value-lock {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    font-family: 'Courier New', monospace;
+}
+
+.time-label-lock {
+    display: block;
+    font-size: 1rem;
+    color: #ffd4e5;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.time-separator {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.lock-animation {
+    margin: 40px 0;
+}
+
+.lock-icon-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.lock-emoji {
+    font-size: 5rem;
+    display: block;
+    animation: shake 3s infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.lock-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulsate 2s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+.lock-hint {
+    font-size: 1.2rem;
+    color: #ffe4f1;
+    font-style: italic;
+}
+
+.preview-message {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.preview-text {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.preview-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+
+.preview-icons span {
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.preview-icons span:nth-child(1) { animation-delay: 0s; }
+.preview-icons span:nth-child(2) { animation-delay: 0.1s; }
+.preview-icons span:nth-child(3) { animation-delay: 0.2s; }
+.preview-icons span:nth-child(4) { animation-delay: 0.3s; }
+.preview-icons span:nth-child(5) { animation-delay: 0.4s; }
+.preview-icons span:nth-child(6) { animation-delay: 0.5s; }
+.preview-icons span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Main Website Hidden State */
+.main-website-hidden {
+    display: none;
+}
+
+.main-website-visible {
+    display: block;
+    animation: fadeInWebsite 2s ease-in;
+}
+
+@keyframes fadeInWebsite {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Countdown Lock Screen */
+@media (max-width: 768px) {
+    .lock-title {
+        font-size: 2rem;
+    }
+    
+    .lock-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .reveal-text {
+        font-size: 1.2rem;
+    }
+    
+    .time-box-lock {
+        min-width: 80px;
+        padding: 15px 20px;
+    }
+    
+    .time-value-lock {
+        font-size: 2.5rem;
+    }
+    
+    .time-separator {
+        font-size: 2rem;
+    }
+    
+    .lock-emoji {
+        font-size: 3rem;
+    }
+    
+    .preview-icons {
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   END COUNTDOWN LOCK SCREEN STYLES
+   ========================================== */
+
 /* Music Toggle Button */
 .music-toggle {
     position: fixed;
