@@ -174,38 +174,43 @@ body {
     border-radius: 30px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
     max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .lock-title-container {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .lock-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
                  0 0 40px rgba(255, 255, 255, 0.5);
     animation: glow 2s ease-in-out infinite;
+    line-height: 1.2;
 }
 
 .lock-subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 8px;
     color: #ffe4f1;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
 }
 
 .lock-message {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #ffd4e5;
     font-style: italic;
 }
 
 .birthday-reveal {
-    margin: 30px 0;
+    margin: 15px 0;
     animation: pulse 2s infinite;
 }
 
@@ -215,30 +220,30 @@ body {
     justify-content: center;
     gap: 15px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 20px 40px;
+    padding: 15px 30px;
     border-radius: 50px;
     border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .reveal-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     animation: bounce 1s infinite;
 }
 
 .reveal-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .countdown-lock-timer {
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .countdown-label {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     color: #ffe4f1;
     font-weight: bold;
 }
@@ -253,26 +258,27 @@ body {
 
 .time-box-lock {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-    padding: 25px 30px;
+    padding: 20px 25px;
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    min-width: 120px;
+    min-width: 100px;
     animation: pulse 2s infinite ease-in-out;
 }
 
 .time-value-lock {
     display: block;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     font-family: 'Courier New', monospace;
+    line-height: 1;
 }
 
 .time-label-lock {
     display: block;
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: #ffd4e5;
     margin-top: 5px;
     text-transform: uppercase;
@@ -280,24 +286,24 @@ body {
 }
 
 .time-separator {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .lock-animation {
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .lock-icon-container {
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .lock-emoji {
-    font-size: 5rem;
+    font-size: 4rem;
     display: block;
     animation: shake 3s infinite;
     position: relative;
@@ -309,8 +315,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     animation: pulsate 2s infinite;
@@ -337,32 +343,33 @@ body {
 }
 
 .lock-hint {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffe4f1;
     font-style: italic;
 }
 
 .preview-message {
-    margin-top: 30px;
-    padding: 25px;
+    margin-top: 15px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .preview-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
-    margin-bottom: 15px;
-    line-height: 1.6;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .preview-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    font-size: 2.5rem;
+    gap: 15px;
+    font-size: 2rem;
     animation: bounce 2s infinite;
+    flex-wrap: wrap;
 }
 
 .preview-icons span {
@@ -421,39 +428,53 @@ body {
 @media (max-width: 768px) {
     .lock-screen-content {
         max-width: 95%;
-        padding: 20px;
-        margin: 10px;
+        padding: 15px;
+        margin: 5px;
+    }
+    
+    .lock-title-container {
+        margin-bottom: 10px;
     }
     
     .lock-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
     }
     
     .lock-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
     }
     
     .lock-message {
-        font-size: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .birthday-reveal {
+        margin: 10px 0;
     }
     
     .reveal-date {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
-        padding: 15px 20px;
+        padding: 10px 15px;
     }
     
     .reveal-icon {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .reveal-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .countdown-lock-timer {
+        margin: 12px 0;
     }
     
     .countdown-label {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
     }
     
     .time-boxes {
@@ -461,20 +482,24 @@ body {
     }
     
     .time-box-lock {
-        min-width: 70px;
-        padding: 12px 15px;
+        min-width: 65px;
+        padding: 10px 12px;
     }
     
     .time-value-lock {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .time-label-lock {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     
     .time-separator {
         font-size: 1.5rem;
+    }
+    
+    .lock-animation {
+        margin: 12px 0;
     }
     
     .lock-emoji {
@@ -482,65 +507,75 @@ body {
     }
     
     .lock-pulse {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     
     .lock-hint {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
     
     .preview-message {
-        padding: 15px;
+        padding: 10px;
+        margin-top: 10px;
     }
     
     .preview-text {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+        margin-bottom: 8px;
     }
     
     .preview-icons {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         gap: 8px;
-        flex-wrap: wrap;
     }
 }
 
 @media (max-width: 480px) {
     .lock-screen-content {
-        padding: 15px;
+        padding: 12px;
     }
     
     .lock-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     
     .lock-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .lock-message {
-        font-size: 0.85rem;
-    }
-    
-    .reveal-text {
-        font-size: 0.85rem;
-    }
-    
-    .countdown-label {
         font-size: 0.95rem;
     }
     
+    .lock-message {
+        font-size: 0.75rem;
+    }
+    
+    .reveal-date {
+        padding: 8px 12px;
+        gap: 5px;
+    }
+    
+    .reveal-icon {
+        font-size: 1.2rem;
+    }
+    
+    .reveal-text {
+        font-size: 0.75rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.85rem;
+    }
+    
     .time-box-lock {
-        min-width: 60px;
-        padding: 10px 12px;
+        min-width: 55px;
+        padding: 8px 10px;
     }
     
     .time-value-lock {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     
     .time-label-lock {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         letter-spacing: 1px;
     }
     
@@ -552,23 +587,48 @@ body {
         font-size: 2rem;
     }
     
+    .lock-pulse {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .lock-hint {
+        font-size: 0.75rem;
+    }
+    
     .preview-text {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
     
     .preview-icons {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         gap: 5px;
     }
 }
 
 @media (max-width: 360px) {
+    .lock-screen-content {
+        padding: 10px;
+    }
+    
     .lock-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .lock-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+    }
+    
+    .lock-message {
+        font-size: 0.65rem;
+    }
+    
+    .reveal-text {
+        font-size: 0.65rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.75rem;
     }
     
     .time-boxes {
@@ -576,12 +636,16 @@ body {
     }
     
     .time-box-lock {
-        min-width: 50px;
-        padding: 8px 10px;
+        min-width: 48px;
+        padding: 6px 8px;
     }
     
     .time-value-lock {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .time-label-lock {
+        font-size: 0.45rem;
     }
     
     .time-separator {
@@ -589,32 +653,89 @@ body {
         margin: 0 2px;
     }
     
-    .preview-icons span {
-        font-size: 1rem;
+    .lock-emoji {
+        font-size: 1.5rem;
+    }
+    
+    .preview-icons {
+        font-size: 0.9rem;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .lock-screen-content {
         max-width: 750px;
-        padding: 30px;
+        padding: 25px;
     }
     
     .lock-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     
     .lock-subtitle {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .time-box-lock {
-        min-width: 100px;
-        padding: 20px 25px;
+        min-width: 90px;
+        padding: 18px 22px;
     }
     
     .time-value-lock {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-height: 700px) {
+    .lock-screen-content {
+        padding: 15px !important;
+        max-height: 98vh;
+    }
+    
+    .lock-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .lock-subtitle {
+        font-size: 1.1rem !important;
+    }
+    
+    .lock-message {
+        font-size: 0.8rem !important;
+    }
+    
+    .lock-title-container {
+        margin-bottom: 8px !important;
+    }
+    
+    .birthday-reveal {
+        margin: 8px 0 !important;
+    }
+    
+    .countdown-lock-timer {
+        margin: 10px 0 !important;
+    }
+    
+    .lock-animation {
+        margin: 10px 0 !important;
+    }
+    
+    .preview-message {
+        margin-top: 8px !important;
+        padding: 10px !important;
+    }
+    
+    .time-box-lock {
+        padding: 10px 12px !important;
+    }
+    
+    .time-value-lock {
+        font-size: 1.8rem !important;
+    }
+    
+    .lock-emoji {
+        font-size: 2rem !important;
     }
 }
 
