@@ -84,11 +84,11 @@ function drawSpinWheel() {
     ctx.lineWidth = 3;
     ctx.stroke();
     
-    // Draw pointer at top
+    // Draw pointer at top (smaller arrow)
     ctx.beginPath();
-    ctx.moveTo(centerX, 20);
-    ctx.lineTo(centerX - 15, 50);
-    ctx.lineTo(centerX + 15, 50);
+    ctx.moveTo(centerX, 30);
+    ctx.lineTo(centerX - 8, 50);
+    ctx.lineTo(centerX + 8, 50);
     ctx.closePath();
     ctx.fillStyle = '#e74c3c';
     ctx.fill();

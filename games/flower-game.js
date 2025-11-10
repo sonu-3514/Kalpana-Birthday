@@ -21,43 +21,72 @@ let flowerGameState = {
 
 function initFlowerGame() {
     const canvas = document.getElementById('flowerCanvas');
-    if (!canvas) return;
+    if (!canvas) {
+        console.error('Flower canvas not found!');
+        return;
+    }
     
     flowerGameState.canvas = canvas;
     flowerGameState.ctx = canvas.getContext('2d');
     
+    // Stop any existing game
+    stopFlowerGame();
+    
     resetFlowerGame();
     setupFlowerControls();
     startFlowerGame();
+    
+    console.log('Flower game initialized successfully!');
 }
 
 function resetFlowerGame() {
     flowerGameState.score = 0;
     flowerGameState.lives = 3;
     flowerGameState.flowers = [];
-    flowerGameState.basket.x = (flowerGameState.canvas.width - flowerGameState.basket.width) / 2;
+    
+    if (flowerGameState.canvas) {
+        flowerGameState.basket.x = (flowerGameState.canvas.width - flowerGameState.basket.width) / 2;
+    }
     
     updateFlowerScore();
 }
 
 function setupFlowerControls() {
+    // Remove old listeners to prevent duplicates
+    const oldLeftBtn = document.getElementById('moveLeft');
+    const oldRightBtn = document.getElementById('moveRight');
+    
+    if (oldLeftBtn) {
+        const newLeftBtn = oldLeftBtn.cloneNode(true);
+        oldLeftBtn.parentNode.replaceChild(newLeftBtn, oldLeftBtn);
+        newLeftBtn.addEventListener('click', () => {
+            moveBasket(-30);
+        });
+    }
+    
+    if (oldRightBtn) {
+        const newRightBtn = oldRightBtn.cloneNode(true);
+        oldRightBtn.parentNode.replaceChild(newRightBtn, oldRightBtn);
+        newRightBtn.addEventListener('click', () => {
+            moveBasket(30);
+        });
+    }
+    
     // Keyboard controls
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+}
+
+function handleKeyDown(e) {
+    if (flowerGameState.isRunning) {
         flowerGameState.keys[e.key] = true;
-    });
-    
-    document.addEventListener('keyup', (e) => {
+    }
+}
+
+function handleKeyUp(e) {
+    if (flowerGameState.isRunning) {
         flowerGameState.keys[e.key] = false;
-    });
-    
-    // Button controls
-    document.getElementById('moveLeft').addEventListener('click', () => {
-        moveBasket(-30);
-    });
-    
-    document.getElementById('moveRight').addEventListener('click', () => {
-        moveBasket(30);
-    });
+    }
 }
 
 function startFlowerGame() {

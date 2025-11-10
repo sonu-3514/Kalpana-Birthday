@@ -159,6 +159,16 @@ function initGameModals() {
             if (modal) {
                 modal.classList.add('active');
                 
+                // Play game music with small delay to ensure modal is visible
+                setTimeout(() => {
+                    if (window.gameMusicManager) {
+                        console.log('🎮 Starting game:', gameType);
+                        gameMusicManager.play(gameType);
+                    } else {
+                        console.error('❌ Music manager not found!');
+                    }
+                }, 100);
+                
                 // Initialize game based on type
                 if (gameType === 'memory' && typeof initMemoryGame === 'function') {
                     initMemoryGame();
@@ -188,6 +198,11 @@ function initGameModals() {
         closeBtn.addEventListener('click', function() {
             this.closest('.game-modal').classList.remove('active');
             
+            // Stop game music
+            if (window.gameMusicManager) {
+                gameMusicManager.stop();
+            }
+            
             // Stop games when closing
             if (typeof stopBalloonGame === 'function') stopBalloonGame();
             if (typeof stopFlowerGame === 'function') stopFlowerGame();
@@ -202,6 +217,12 @@ function initGameModals() {
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
                     modal.classList.remove('active');
+                    
+                    // Stop game music
+                    if (window.gameMusicManager) {
+                        gameMusicManager.stop();
+                    }
+                    
                     if (typeof stopBalloonGame === 'function') stopBalloonGame();
                     if (typeof stopFlowerGame === 'function') stopFlowerGame();
                     if (typeof stopWhackGame === 'function') stopWhackGame();
